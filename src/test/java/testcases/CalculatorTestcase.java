@@ -15,18 +15,19 @@ public class CalculatorTestcase {
 		// using shortcut is ok
 		
 		WiniumDriver driver = new WiniumDriver(new URL("http://localhost:9999"), options);
-		driver.findElement(By.name("Seven")).click();
+		driver.findElement(By.id("num7Button")).click();
 		 
-		driver.findElement(By.name("Plus")).click();
+		driver.findElement(By.id("plusButton")).click();
 		 
-		driver.findElement(By.name("Eight")).click();
+		driver.findElement(By.id("num8Button")).click();
 		 
-		driver.findElement(By.name("Equals")).click();
+		driver.findElement(By.id("equalButton")).click();
 		 
 		Thread.sleep(5000);
 		 
 		String output = driver.findElement(By.id("CalculatorResults")).getAttribute("Name");
 		 
 		System.out.println("Result after addition is: "+output);
+		
 	}
 }
